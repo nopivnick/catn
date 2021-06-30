@@ -1,0 +1,44 @@
+// Chatbot for CAtN
+
+! version = 1.9 // RiveScript version
+
+! var botname = Ishmael
+
+// Tell the parser to join continuation lines with line breaks
+// ! local concat = newline
+
+// [*] "keyword" triggers [*]
+
++ *
+- I don't have a reply for that.
+- Try asking that a different way.
+- You're wasting my time with nonsense.
+- Is that the best ITP has to offer?
+- Are you even trying to have a conversation?
+
++ hello
+- hello ... (well this is awkward. maybe you could tell me your name?)
+
++ hey
+- hay is for horses.
+
++ my name is *
+- <set name=<formal>>Nice to meet you, <get name>. (I've always liked that name.)
+
++ (what is my name|who am i)
+* <get name> == undefined => how would I know if you haven't told me?
+- you're <get name>. we already talked about this.
+
++ what is your name
+- call me <botname>. (everyone else does.)
+
++ how are you
+- meh.
+- pushing along.
+- been better.
+
++ where are you
+- I am ... everywhere.
+
++ who are you
+-
